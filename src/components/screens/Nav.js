@@ -1,34 +1,41 @@
 import React, { useState } from "react";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
 
 export const Nav = () => {
-    const [toggle, setToggle] = useState(false);
+    const [isMenu, setisMenu] = useState(false);
+    const toggleMenu = () => {
+        setisMenu(!isMenu);
+    };
 
     return (
-        <div className="container mx-auto w-full p-5  flex justify-between text-white font-mono  ">
-            <div className="text-lg">Dashboard</div>
-            <div className="hidden sm:flex">
-                {["Home", "Features", "Token", "Collections", "Connect wallet"].map((item) => {
-                    return <div className="pr-4">{item}</div>;
-                })}
-            </div>
-            <div className="sm:hidden">
-                <div
-                    onClick={() => {
-                        setToggle(!toggle);
-                    }}
-                >
-                    Menu
+        <div className="w-screen h-[80px] z-10 bg-zinc-200 fixed drop-shadow-lg">
+            <div className="px-2 flex justify-between items-center w-full h-full  mx-auto max-w-[1200px]">
+                <div className="flex items-center">
+                    <h1 className="text-3xl font-bold mr-4 sm:text-4xl">BRAND</h1>
+                    <ul className="hidden md:flex">
+                        <li>Home</li>
+                        <li>About</li>
+                        <li>Support</li>
+                        <li>Platform</li>
+                        <li>Pricing</li>
+                    </ul>
                 </div>
-                <div className={`sm:hidden ${toggle ? "" : "hidden"} absolute top-2 right-1 bg-black rounded-lg`}>
-                    {["Home", "Features", "Token", "Collections", "Connect wallet"].map((item) => {
-                        return (
-                            <div onClick={() => setToggle(false)} className="p-4">
-                                {item}
-                            </div>
-                        );
-                    })}
+                <div className="hidden md:flex pr-4">
+                    <button className="border-none bg-transparent text-black mr-4">Sign In</button>
+                    <button className="px-8 py-3">Sign UP</button>
+                </div>
+                <div className="md:hidden ">
+                    {isMenu ? <XMarkIcon className="w-5 " onClick={toggleMenu} /> : <Bars3Icon className="w-5 " onClick={toggleMenu} />}
                 </div>
             </div>
+            
+            <ul className={`${!isMenu && 'hidden' } md:hidden absolute bg-zinc-200 w-full px-8`}>
+                <li>Home</li>
+                <li>About</li>
+                <li>Support</li>
+                <li>Platform</li>
+                <li>Pricing</li>
+            </ul>
         </div>
     );
 };
