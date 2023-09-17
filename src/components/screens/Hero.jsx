@@ -16,9 +16,9 @@ export const Hero = () => {
                 <div>
                     <img className="w-full" src={Images.home} />
                 </div>
-                <div className="flex flex-col flex-wrap items-center 
-                py-3 bg-zinc-100 drop-shadow-sm rounded-xl 
-                absolute bottom-[5%] text-center place-self-center mx-4
+                <div className="sm:flex flex-col flex-wrap items-center 
+                py-2 bg-zinc-100 drop-shadow-sm rounded-xl 
+                absolute bottom-[2%] text-center place-self-center mx-2 hidden
                 ">
                     <p className="text-black">Data Services</p>
                     <div className="flex flex-wrap mt-2 mx-3" >

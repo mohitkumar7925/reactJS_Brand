@@ -13,15 +13,15 @@ export const About = () => {
                 </div>
                 <div className=" grid grid-cols-3   gap-2 mx-auto  text-center  mt-10">
                     <div className="shadow-xl px-4 py-2 rounded-xl max-w-[400px]">
-                        <p className="text-indigo-600 text-5xl font-bold">100%</p>
+                        <p className="text-indigo-600 text-4xl font-bold">100%</p>
                         <p>Completions</p>
                     </div>
                     <div className="shadow-xl px-4 py-2 rounded-xl max-w-[400px]">
-                        <p className="text-indigo-600 text-5xl font-bold">24/7</p>
+                        <p className="text-indigo-600 text-4xl font-bold">24/7</p>
                         <p>Delivery</p>
                     </div>
                     <div className="shadow-xl px-4 py-2 rounded-xl max-w-[400px]">
-                        <p className="text-indigo-600 text-5xl font-bold">100K</p>
+                        <p className="text-indigo-600 text-4xl font-bold">100K</p>
                         <p>Transactions</p>
                     </div>
                 </div>
